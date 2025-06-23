@@ -1,0 +1,79 @@
+/* START border-box fix */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #b0f7d2;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+    margin: 0px;
+}
+
+#wrapper {
+    background-color: #d8b8e6;
+    display: flex;
+    max-width: 1000px;
+    margin: 0px auto;
+    flex-wrap: wrap;
+     /* allow children to wrap */
+}
+
+/* Add padding to all of the #wrapper child elements */
+#wrapper>* {
+    padding: 40px;
+}
+
+header {
+    background-color: #f2799f;
+    flex: 1 0 100%; /* grow on, shrink off, span width of browser */
+    order: 1; 
+    /* display order regardless of html structure */
+    font-family: 'Lucida Sans';
+    font-size: 30px;
+}
+
+
+main {
+    background-color: #f294d7;
+    order: 3;
+     /*display order regardless of html structure */
+     flex: 1 1 500px;
+     font-family: helvetica;
+}
+
+nav {
+    background-color: #acf7fc;
+    order: 2;
+    /*display order regardless of html structure */
+    flex: 1 0 200px; /* grow but do not shrink less than basis */
+    font-family: verdana;
+}
+
+aside {
+    background-color: #7ec4c3;
+    order: 4;
+    /*display order regardless of html structure */
+    flex: 1 0 200px; /* grow but do not shrink less than basis */
+    font-family: Verdana;
+}
+
+footer {
+    background-color: #a62850;
+    order: 15;
+     /*display order regardless of html structure */
+    flex: 1 0 100%;
+     /* grow on, shrink off, span width of parent */
+
+}
