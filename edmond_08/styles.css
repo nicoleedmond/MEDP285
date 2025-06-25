@@ -1,0 +1,109 @@
+ /* border-box fix */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  /* remove margin and padding on body */
+  padding: 0;
+  margin: 0;
+  background-color: #8fdbd9;
+}
+/* Grouping example */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background: #e4edeb;
+  /* grid layout parent */
+  display: grid;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* padding on immediate children of wrapper */
+.wrapper>* {
+  padding: 20px;
+}
+
+header {
+  background: #b2edde;
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+  background-color:#f5cbe8;
+  padding: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+main {
+  background: #f7a1b5;
+  /* span 6 cols */
+  grid-column: 4 / 10;
+  font-size: 25px;
+  font-style: Garamond;
+  background-color: #f5c4ed ;
+  padding: 20px 20px 40px 20px;
+}
+
+nav {
+  background: cadetblue;
+  /* span 3 cols */
+  grid-column: 1 / 4;
+  background-color: #f5f2f4 ;
+  padding: 40px 20px 40px 20px;
+}
+
+nav a {
+
+  font-size: 18px;
+  font-weight: 18;
+  color: #c4546b;
+  font-family: Verdana;
+  margin: 0px 40px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
+nav a:hover {
+  color: #0f0f0f;
+}
+
+aside {
+  background: #4ad4bd;
+  /* span 3 cols */
+  grid-column: 10 / 13;
+  font-style: Garamond;
+}
+
+/* span 2 rows */
+main,
+nav,
+aside {
+  grid-row: 2 / 4;
+}
+
+footer {
+  background: #f1cef5;
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+
+
