@@ -1,0 +1,347 @@
+/* border-box fix */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Global styles (apply to all pages) */
+body {
+  /* remove margin and padding on body */
+  padding: 0;
+  margin: 0;
+  background-color: #8fdbd9;
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Home page colors */
+body.home {
+  background-color: #ecd5f0;
+}
+
+/* About page colors */
+body.about {
+  background-color: #f5c6ed;
+}
+
+/* Seasons page colors */
+body.seasons {
+  background-color: #ebdb94;
+}
+
+/* Grouping all pages */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase; 
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+table {
+  border: #000000 1px solid;
+  margin: 40px 0px;
+  padding: 10px;
+  text-align: center;
+  width: 100%
+}
+
+tr {
+  margin: 0px;
+  border-width: 10px;
+  padding: 10px;
+}
+
+th, td {
+   margin: 1px;
+   border: 1px solid #333333;
+   border-width: 2px;
+   padding: 10px;
+}
+
+.spring-table {
+  background-color: #ffadec;
+  color: #000000;
+}
+
+.summer-table {
+  background-color: #faefb6;
+  color: #000000;
+}
+
+.fall-table {
+  background-color:#fac278;
+ color: #000000; 
+}
+
+.winter-table {
+  background-color:#95afe6;
+  color: #000000;
+}
+
+.wrapper-grid {
+  background: #e4edeb;
+  /* grid layout parent */
+  display: grid;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* padding on immediate children of wrapper */
+.wrapper-grid>* {
+  padding: 20px;
+}
+
+.wrapper-flex {
+  background: #e4edeb;
+  /* grid layout parent */
+  display: flex;
+  /* create 12 col layout */
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* padding on immediate children of wrapper */
+.wrapper-flex>* {
+  padding: 20px;
+}
+
+.wrapper-grid,
+.wrapper-flex,
+header {
+  padding-top: 20px; 
+  margin-top: -2;
+}
+
+
+header {
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+  background-color:#d5f7eb;
+  padding: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  background: #8eedbb;
+  /* span 6 cols */
+  grid-column: 4 / 10;
+  font-size: 25px;
+  background-color: #5cab81 ;
+  padding: 20px 20px 40px 20px;
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+aside img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+aside img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px #000000;
+  cursor: pointer;
+}
+
+nav {
+  background: cadetblue;
+  /* span 3 cols */
+  grid-column: 1 / 4;
+  background-color: #81deac ;
+  padding: 40px 20px 40px 20px;
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+nav a {
+  font-size: 30px;
+  font-weight: 25;
+  color:#e3a807;
+  margin: 0px 40px;
+  padding: 20px;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  color: #0f0f0f;
+}
+
+.about-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 45px;
+  font-family:"Baskervville", serif;
+  color: #08bf7c; 
+}
+
+.main-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+  font-family:"Baskervville", serif;
+}
+
+.season-list {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family:"Baskervville", serif;
+}
+
+aside {
+  background: #4ad4bd;
+  /* span 3 cols */
+  grid-column: 10 / 13;
+}
+
+aside ul {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+aside li {
+  margin-bottom: 12px
+  ;
+}
+
+blockquote {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin: 20px 0;
+  font-style: italic;
+  padding-left: 15px;
+  border-left: 4 px solid;
+}
+
+/* span 2 rows */
+main,
+nav,
+aside {
+  grid-row: 2 / 4;
+  font-family: "Baskervville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  background: #b4dbdb;
+  /* span all 12 cols*/
+  grid-column: 1 / 13;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.gif-tree {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+  /* Float animation */
+  @keyframes floatUpdown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px); /* Move up by 15px */
+
+    }
+  }
+
+  .float {
+    animation: floatUpdown 3s ease-in-out infinite;
+  }
+
+.season-quiz {
+    background-color: #fefae0;
+    padding: 30px;
+    margin: 40px auto;
+    width: 70%;
+    border-radius: 10px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    box-shadow: 0 0 10px #303633 ;
+}
+
+.season-quiz label a {
+    text-decoration: none;
+    color: #5c3d2e;
+    font-size: 18px;
+}
+
+.season-quiz label a:hover {
+    color: #b08968;
+}
+
+.season-result {
+    display: none;
+    background-color: #f0efeb;
+    margin: 40px auto;
+    padding: 20px;
+    border-left: 6px solid #a98467;
+    width: 60%;
+    border-radius: 6px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+:target {
+    display: block;
+}
+
+.season-feelings {
+    background-color: #f0f8f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-family: Garamond, serif;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+.season-feelings h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.season-feelings input[type="radio"] {
+    margin-right: 8px;
+}
+
